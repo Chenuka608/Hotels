@@ -73,15 +73,15 @@ const featuredHotels = [
 
 export default function FeaturedHotels() {
   return (
-    <section className="py-20 px-6 bg-gradient-to-b from-white to-gray-50">
+    <section className="py-20 px-6 bg-linear-to-b from-stone-50 to-white" id="hotels">
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <div className="inline-block bg-amber-100 text-amber-700 px-4 py-2 rounded-full text-sm font-semibold mb-4">
+          <div className="inline-block bg-emerald-100 text-emerald-800 px-4 py-2 rounded-full text-sm font-semibold mb-4 border border-emerald-200">
             🏆 Our Curated Selection
           </div>
-          <h2 className="text-5xl md:text-6xl font-bold text-slate-900 mb-4">
-            Featured Luxury <span className="bg-gradient-to-r from-amber-500 to-orange-600 bg-clip-text text-transparent">Hotels</span>
+          <h2 className="text-5xl md:text-6xl text-slate-900 mb-4 luxury-heading">
+            Featured Luxury <span className="bg-linear-to-r from-slate-900 to-emerald-700 bg-clip-text text-transparent">Hotels</span>
           </h2>
           <p className="text-lg text-slate-600 max-w-2xl mx-auto">
             Discover our handpicked selection of the finest luxury hotels and resorts across Sri Lanka's most beautiful destinations.
@@ -97,7 +97,7 @@ export default function FeaturedHotels() {
 
         {/* View All Button */}
         <div className="text-center mt-16">
-          <button className="border-2 border-amber-600 text-amber-700 font-bold py-4 px-10 rounded-full hover:bg-amber-50 transition-all duration-300 text-lg">
+          <button className="border-2 border-slate-800 text-slate-800 font-bold py-4 px-10 rounded-full hover:bg-slate-100 transition-all duration-300 text-lg">
             View All Hotels
           </button>
         </div>

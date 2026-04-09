@@ -15,14 +15,14 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className="fixed w-full bg-white shadow-md z-50 px-6 py-4 border-b border-gray-100">
+    <nav className="fixed w-full bg-white/85 backdrop-blur-md shadow-sm z-50 px-6 py-4 border-b border-stone-200/80">
       <div className="max-w-7xl mx-auto flex justify-between items-center">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2">
-          <div className="h-10 w-10 bg-gradient-to-r from-amber-400 to-amber-600 rounded-lg flex items-center justify-center">
+          <div className="h-10 w-10 bg-linear-to-r from-slate-900 to-emerald-700 rounded-lg flex items-center justify-center shadow-md">
             <span className="text-white font-bold text-lg">✨</span>
           </div>
-          <span className="text-2xl font-bold text-slate-900 hidden sm:inline">
+          <span className="text-3xl text-slate-900 hidden sm:inline luxury-heading">
             LuxeStay
           </span>
         </Link>
@@ -33,7 +33,7 @@ export default function Navbar() {
             <Link
               key={link.href}
               href={link.href}
-              className="text-slate-700 hover:text-amber-600 transition-colors duration-300 font-medium"
+              className="text-slate-700 hover:text-emerald-700 transition-colors duration-300 font-semibold"
             >
               {link.label}
             </Link>
@@ -41,7 +41,7 @@ export default function Navbar() {
         </div>
 
         {/* CTA Button */}
-        <button className="hidden md:block bg-gradient-to-r from-amber-400 to-amber-600 text-white font-bold py-2 px-6 rounded-full hover:shadow-lg hover:shadow-amber-500/50 transition-all duration-300">
+        <button className="hidden md:block bg-linear-to-r from-slate-900 to-emerald-800 text-white font-bold py-2 px-6 rounded-full hover:shadow-lg hover:shadow-emerald-700/30 transition-all duration-300">
           Book Now
         </button>
 
@@ -58,19 +58,19 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden absolute top-full left-0 right-0 bg-white/95 backdrop-blur-md mt-0 border-b border-gray-100">
+        <div className="md:hidden absolute top-full left-0 right-0 bg-white/95 backdrop-blur-md mt-0 border-b border-stone-200">
           <div className="flex flex-col py-4 px-6 gap-4">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-slate-700 hover:text-amber-600 transition-colors py-2 font-medium"
+                className="text-slate-700 hover:text-emerald-700 transition-colors py-2 font-semibold"
                 onClick={() => setIsOpen(false)}
               >
                 {link.label}
               </Link>
             ))}
-            <button className="bg-gradient-to-r from-amber-400 to-amber-600 text-white font-bold py-2 px-6 rounded-full w-full">
+            <button className="bg-linear-to-r from-slate-900 to-emerald-800 text-white font-bold py-2 px-6 rounded-full w-full">
               Book Now
             </button>
           </div>
